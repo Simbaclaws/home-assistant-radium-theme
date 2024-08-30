@@ -1,0 +1,242 @@
+# Radium Theme for Home Assistant
+
+This is the Radium theme for Home Assistant, providing a sleek and modern interface with a dark color scheme. The theme uses a consistent palette of blues, greys, and greens, inspired by the Radium color theme.
+
+## Installation
+
+To install the Radium theme, follow these steps:
+
+1. **Locate Your Themes Directory:**
+   - Navigate to your Home Assistant configuration directory.
+   - Inside the configuration directory, find or create a directory named `themes`.
+
+2. **Create the Theme File:**
+   - Create a new YAML file inside the `themes` directory, e.g., `radium_theme.yaml`.
+
+3. **Paste the Theme Configuration:**
+   - Copy the contents of the theme configuration provided below into your `radium_theme.yaml` file.
+
+4. **Update Configuration:**
+   - Add the following line to your `configuration.yaml` file if it's not already there:
+     ```yaml
+     frontend:
+       themes: !include_dir_merge_named themes
+     ```
+
+5. **Restart Home Assistant:**
+   - For the changes to take effect, restart Home Assistant.
+
+6. **Apply the Theme:**
+   - Go to your profile in the Home Assistant UI.
+   - Select `Radium` from the themes dropdown to apply it.
+
+## Theme Configuration
+
+```yaml
+radium_theme:
+  # Define Color Variables
+  radium-blue-color: "#7ab0df"
+  radium-light-blue-color: "#87bdec"
+  radium-grey-color: "#45484c"
+  radium-green-color: "#37d99e"
+  radium-dark-grey-color: "#30303a"
+  radium-background-color: "#101317"
+  radium-secondary-background-color: "#191d22"
+  radium-dark-color: "#0a0d11"
+  radium-light-grey-color: "#525559"
+  radium-card-background-color: "#24282d"
+  radium-list-background-color: "#2b2e32"
+  radium-icon-grey-color: "#c5c5c6"
+  radium-black-color: "#000000"
+  radium-white-color: "#ffffff"
+  radium-error-color: "#db4437"
+  radium-warning-color: "#ffa600"
+  radium-success-color: "#43a047"
+  radium-info-color: "#039be5"
+
+  # Main UI Colors
+  primary-color: "var(--radium-blue-color)"
+  accent-color: "var(--radium-green-color)"
+  dark-primary-color: "var(--radium-grey-color)"
+  light-primary-color: "var(--radium-light-blue-color)"
+
+  # Text colors
+  primary-text-color: "var(--radium-white-color)"
+  text-primary-color: "var(--radium-white-color)"
+  secondary-text-color: "var(--radium-blue-color)"
+  disabled-text-color: "var(--radium-light-grey-color)"
+  text-light-primary-color: "var(--radium-dark-color)"
+
+  # Specific UI Elements
+  sidebar-icon-color: "var(--radium-icon-grey-color)"
+  sidebar-text-color: "var(--radium-white-color)"
+  sidebar-background-color: "var(--radium-dark-color)"
+
+  # Backgrounds
+  primary-background-color: "var(--radium-background-color)"
+  secondary-background-color: "var(--radium-secondary-background-color)"
+  card-background-color: "var(--radium-card-background-color)"
+  paper-listbox-background-color: "var(--radium-list-background-color)"
+  clear-background-color: "var(--radium-background-color)"
+
+  # Dividers
+  divider-color: "var(--radium-dark-grey-color)"
+  outline-color: "var(--radium-dark-grey-color)"
+  outline-hover-color: "var(--radium-light-grey-color)"
+
+  # Buttons and Inputs
+  paper-item-icon-color: "var(--radium-icon-grey-color)"
+  paper-item-icon-active-color: "var(--radium-green-color)"
+  paper-button-ink-color: "var(--radium-light-blue-color)"
+  mdc-theme-primary: "var(--radium-blue-color)" # Maintaining blue for regular buttons
+  paper-button-raised-background-color: "var(--radium-black-color)" # Specific buttons like add integrations
+
+  paper-input-container-color: "var(--radium-white-color)" # Input text
+  paper-input-container-focus-color: "var(--radium-green-color)" # Input text focus
+  paper-input-container-background-color: "var(--radium-dark-color)" # Background for the actual input area of dropdowns
+  paper-input-container-shaded-background-color: "var(--radium-dark-color)" # Shaded background for consistency
+  input-fill-color: "var(--radium-dark-color)" # Background of input fields
+  input-disabled-fill-color: "var(--radium-dark-grey-color)" # Disabled input background
+  input-ink-color: "var(--radium-white-color)" # Input text color
+  input-label-ink-color: "var(--radium-light-grey-color)" # Input label color
+  input-disabled-ink-color: "var(--radium-light-grey-color)" # Disabled input text color
+  input-idle-line-color: "var(--radium-grey-color)" # Idle line color for inputs
+  input-hover-line-color: "var(--radium-light-grey-color)" # Hover line color for inputs
+  input-disabled-line-color: "var(--radium-dark-grey-color)" # Disabled line color
+  input-outlined-idle-border-color: "var(--radium-grey-color)" # Idle border color for outlined inputs
+  input-outlined-hover-border-color: "var(--radium-light-grey-color)" # Hover border color for outlined inputs
+  input-outlined-disabled-border-color: "var(--radium-dark-grey-color)" # Disabled border color for outlined inputs
+  input-dropdown-icon-color: "var(--radium-icon-grey-color)" # Dropdown icon color
+
+  # Scrollbars
+  scrollbar-thumb-color: "var(--radium-light-grey-color)" # Scrollbar color
+
+  # Headers
+  app-header-background-color: "var(--radium-background-color)"
+  app-header-text-color: "var(--radium-light-blue-color)"
+  header-height: "56px"
+
+  # States
+  state-icon-color: "var(--radium-icon-grey-color)"
+  state-icon-active-color: "#f0a988"
+  state-icon-unavailable-color: "#ff8e8e"
+  state-active-color: "var(--radium-warning-color)"
+  state-inactive-color: "var(--radium-grey-color)"
+  state-unavailable-color: "var(--radium-light-grey-color)"
+  
+  # Domain-specific State Colors
+  state-alarm_control_panel-armed_away-color: "var(--radium-green-color)"
+  state-alarm_control_panel-armed_custom_bypass-color: "var(--radium-green-color)"
+  state-alarm_control_panel-armed_home-color: "var(--radium-green-color)"
+  state-alarm_control_panel-armed_night-color: "var(--radium-green-color)"
+  state-alarm_control_panel-armed_vacation-color: "var(--radium-green-color)"
+  state-alarm_control_panel-arming-color: "var(--radium-warning-color)"
+  state-alarm_control_panel-disarming-color: "var(--radium-warning-color)"
+  state-alarm_control_panel-pending-color: "var(--radium-warning-color)"
+  state-alarm_control_panel-triggered-color: "var(--radium-error-color)"
+  state-alert-off-color: "var(--radium-warning-color)"
+  state-alert-on-color: "var(--radium-error-color)"
+  state-binary_sensor-active-color: "var(--radium-warning-color)"
+  state-binary_sensor-battery-on-color: "var(--radium-error-color)"
+  state-binary_sensor-carbon_monoxide-on-color: "var(--radium-error-color)"
+  state-binary_sensor-gas-on-color: "var(--radium-error-color)"
+  state-binary_sensor-heat-on-color: "var(--radium-error-color)"
+  state-binary_sensor-lock-on-color: "var(--radium-error-color)"
+  state-binary_sensor-moisture-on-color: "var(--radium-error-color)"
+  state-binary_sensor-problem-on-color: "var(--radium-error-color)"
+  state-binary_sensor-safety-on-color: "var(--radium-error-color)"
+  state-binary_sensor-smoke-on-color: "var(--radium-error-color)"
+  state-binary_sensor-sound-on-color: "var(--radium-error-color)"
+  state-binary_sensor-tamper-on-color: "var(--radium-error-color)"
+  state-climate-auto-color: "var(--radium-green-color)"
+  state-climate-cool-color: "var(--radium-blue-color)"
+  state-climate-dry-color: "var(--radium-warning-color)"
+  state-climate-fan_only-color: "var(--radium-info-color)"
+  state-climate-heat-color: "var(--radium-error-color)"
+  state-climate-heat-cool-color: "var(--radium-warning-color)"
+  state-cover-active-color: "var(--radium-grey-color)"
+  state-device_tracker-active-color: "var(--radium-blue-color)"
+  state-device_tracker-home-color: "var(--radium-green-color)"
+  state-fan-active-color: "var(--radium-info-color)"
+  state-humidifier-on-color: "var(--radium-blue-color)"
+  state-lawn_mower-error-color: "var(--radium-error-color)"
+  state-lawn_mower-mowing-color: "var(--radium-green-color)"
+  state-light-active-color: "var(--radium-warning-color)"
+  state-lock-jammed-color: "var(--radium-error-color)"
+  state-lock-locked-color: "var(--radium-green-color)"
+  state-lock-locking-color: "var(--radium-warning-color)"
+  state-lock-unlocked-color: "var(--radium-error-color)"
+  state-lock-unlocking-color: "var(--radium-warning-color)"
+  state-lock-open-color: "var(--radium-error-color)"
+  state-lock-opening-color: "var(--radium-warning-color)"
+  state-media_player-active-color: "var(--radium-light-blue-color)"
+  state-person-active-color: "var(--radium-blue-color)"
+  state-person-home-color: "var(--radium-green-color)"
+  state-plant-active-color: "var(--radium-error-color)"
+  state-siren-active-color: "var(--radium-error-color)"
+  state-sun-above_horizon-color: "var(--radium-warning-color)"
+  state-sun-below_horizon-color: "var(--radium-grey-color)"
+  state-switch-active-color: "var(--radium-warning-color)"
+  state-update-active-color: "var(--radium-warning-color)"
+  state-vacuum-active-color: "var(--radium-green-color)"
+  state-valve-active-color: "var(--radium-blue-color)"
+  state-sensor-battery-high-color: "var(--radium-green-color)"
+  state-sensor-battery-low-color: "var(--radium-error-color)"
+  state-sensor-battery-medium-color: "var(--radium-warning-color)"
+  state-water_heater-eco-color: "var(--radium-green-color)"
+  state-water_heater-electric-color: "var(--radium-warning-color)"
+  state-water_heater-gas-color: "var(--radium-warning-color)"
+  state-water_heater-heat_pump-color: "var(--radium-warning-color)"
+  state-water_heater-high_demand-color: "var(--radium-error-color)"
+  state-water_heater-performance-color: "var(--radium-error-color)"
+
+  # History Colors
+  history-unavailable-color: "transparent"
+  history-unknown-color: "var(--radium-dark-grey-color)"
+
+  # Tables
+  table-row-background-color: "var(--radium-background-color)"
+  table-row-alternative-background-color: "var(--radium-secondary-background-color)"
+  
+  # Paper typography and shadow Styles
+  paper-font-common-base: "Roboto, Noto, sans-serif"
+  paper-font-common-code: "Roboto Mono, Consolas, Menlo, monospace"
+  paper-font-common-expensive-kerning: "optimizeLegibility"
+  paper-font-common-nowrap: "nowrap"
+  paper-font-common-ellipsis: "ellipsis"
+
+  shadow-transition: "box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1)"
+  shadow-none: "none"
+  shadow-elevation-2dp: "0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)"
+  shadow-elevation-3dp: "0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 3px -2px rgba(0, 0, 0, 0.4)"
+  shadow-elevation-4dp: "0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4)"
+  shadow-elevation-6dp: "0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4)"
+  shadow-elevation-8dp: "0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4)"
+  shadow-elevation-12dp: "0 12px 16px 1px rgba(0, 0, 0, 0.14), 0 4px 22px 3px rgba(0, 0, 0, 0.12), 0 6px 7px -4px rgba(0, 0, 0, 0.4)"
+  shadow-elevation-16dp: "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4)"
+  shadow-elevation-24dp: "0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.4)"
+
+  # Typography
+  material-h6-font-size: "1.25rem"
+  material-small-font-size: "0.875rem"
+  material-caption-font-size: "0.75rem"
+  material-button-font-size: "0.875rem"
+  paper-font-display4: "112px 300 120px"
+  paper-font-display3: "56px 400 60px"
+  paper-font-display2: "45px 400 48px"
+  paper-font-display1: "34px 400 40px"
+  paper-font-headline: "24px 400 32px"
+  paper-font-title: "20px 500 28px"
+  paper-font-subhead: "16px 400 24px"
+  paper-font-body2: "14px 500 24px"
+  paper-font-body1: "14px 400 20px"
+  paper-font-caption: "12px 400 20px"
+  paper-font-menu: "13px 500 24px"
+  paper-font-button: "14px 500 24px uppercase"
+  paper-font-code2: "14px 700 20px"
+  paper-font-code1: "14px 500 20px"
+```
+
+## License
+
+This theme is provided under the MIT License. You are free to use, modify, and distribute it. If you make significant changes, please consider sharing them back with the community.
