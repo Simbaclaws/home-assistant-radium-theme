@@ -2,6 +2,10 @@
 
 This is the Radium theme for Home Assistant, providing a sleek and modern interface with a dark color scheme. The theme uses a consistent palette of blues, greys, and greens, inspired by the Radium color theme.
 
+## Screenshot
+
+![Radium Theme Screenshot](./screenshot.png)
+
 ## Installation
 
 To install the Radium theme, follow these steps:
